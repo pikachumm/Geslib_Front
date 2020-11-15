@@ -1,0 +1,31 @@
+<!--<h1>Prueba</h1>
+<div *ngIf="articulos!=null; else espera">
+    <table border="1">
+      <tr>
+        <td>Codigo</td><td>Descripcion</td><td>Precio</td>
+      </tr>
+      <tr *ngFor="let art of articulos">
+        <td>{{art.title}}</td>
+        <td>{{art.body}}</td>
+        <td>{{art.id}}</td>
+      </tr>
+    </table>
+  </div>
+  <ng-template #espera>Esperando datos...</ng-template>-->
+
+
+  <div class="container-fluid">
+
+    <div *ngIf="articulos!=null; else espera">
+        <div *ngFor="let art of articulos" style="display: inline-block;">
+            <div class="card">
+              <img src="img/aladdin.jpg" class="card-img-top w-50 align-self-center" alt="...">
+              <div class="card-body" >
+                <h5 class="card-title">{{art.title}}</h5>
+                <p class="card-text">{{art.body}}</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                <a class="btn btn-block btn-success" href="verMas.html">Ver más...</a>
+            </div>
+          </div>
+        </div>
+      </div>
